@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center/cover;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding-top: 20px;
+    position: fixed;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    flex-grow: 1;
+    color: white;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Cards Section */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+    .main-content {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100px;
+    }
+    .main-content {
+        margin-left: 100px;
+    }
+    .sidebar ul li a {
+        font-size: 14px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <body>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>User Panel</h2>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">My Profile</a></li>
+                <li><a href="#">Leave Balance</a></li>
+                <li><a href="#">Payslips</a></li>
+                <li><a href="#">Apply for Leave</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="../userlogout">Logout</a></li>
+            </ul>
+        </div>
+    
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <h1>Welcome, User!</h1>
+                <p>Your latest activities and updates.</p>
+            </header>
+    
+            <section class="cards">
+                <div class="card">
+                    <h3>Leave Balance</h3>
+                    <p>12 Days</p>
+                </div>
+                <div class="card">
+                    <h3>Upcoming Payroll</h3>
+                    <p>25th Feb 2025</p>
+                </div>
+                <div class="card">
+                    <h3>Last Payslip</h3>
+                    <p>Jan 2025</p>
+                </div>
+                <div class="card">
+                    <h3>Pending Requests</h3>
+                    <p>2 Leave Requests</p>
+                </div>
+            </section>
+        </div>
+</body>
+</html>
