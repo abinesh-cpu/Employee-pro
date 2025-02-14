@@ -1,35 +1,33 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from django.contrib.auth.models import User
+from django.contrib.auth.models import auth,User
 from django.contrib.auth import logout
+from .models import *
 
 # Create your views here.
 
 def index(request):
     return render(request,'index.html')
-from .models import *
 # Create your views here.
-users=[]
+
 def userlogin(request):
     if request.method=='POST':
         username=request.POST['username']
         password=request.POST['password']
-        users.append({'username':username,'password':password})
-        for i in users:
-            if i['username']==username and i['password']==password:
-                print("logged in successfully")
-                users.append({'username':username,'password':password})
-                return redirect(userhome)
-    return render(request,'userlogin.html',{'user':user})
+        user=auth.authenticate(username=username,password=password)
+        if user is not None:
+            auth.login(request,user)
+            return redirect(userhome)
+        else:
+            return redirect(userlogin)
+    return render(request,'userlogin.html')
 def userregister(request):
     if request.method=='POST':
-        slno=len(users)
         username=request.POST['username']
         password=request.POST['password']
         email=request.POST['email']
-        data=user.objects.create(username=username,email=email,password=password)
-        users.append({'slno':slno+1,'username':username,'password':password,'email':email})
-        print(users)
+        data=User.objects.create_user(username=email,email=email,password=password,first_name=username)
+        data.save()
         return redirect(userlogin)
     return render(request,'userregister.html')
 
@@ -58,6 +56,10 @@ def userlogout(request):
         logout(request)
         return redirect(userlogin)
 def userhome(request):
-    return render(request,'userhome.html')
+    if '_auth_user_id' in request.session:
+        user=User.objects.get(pk=request.session['_auth_user_id'])
+        return render(request,'userhome.html',{'user':user})
+    else:
+        return redirect(userlogin)
 
 
