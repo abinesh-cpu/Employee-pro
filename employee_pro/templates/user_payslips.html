@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee-Pro | Payslips</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .payslip-container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            text-align: center;
+        }
+        .payslip-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+        .payslip-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .payslip-table th, .payslip-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        .payslip-table th {
+            background-color: #00509E;
+            color: white;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #ffcc00;
+            color: #003366;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            background-color: #ff9900;
+        }
+    </style>
+</head>
+<body>
+    <div class="payslip-container">
+        <div class="payslip-title">Payslips</div>
+        <table class="payslip-table">
+            <tr>
+                <th>Month</th>
+                <th>Year</th>
+                <th>Download</th>
+            </tr>
+            <tr>
+                <td>January</td>
+                <td>2025</td>
+                <td><a href="#" class="btn">Download</a></td>
+            </tr>
+            <tr>
+                <td>December</td>
+                <td>2024</td>
+                <td><a href="#" class="btn">Download</a></td>
+            </tr>
+            <tr>
+                <td>November</td>
+                <td>2024</td>
+                <td><a href="#" class="btn">Download</a></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

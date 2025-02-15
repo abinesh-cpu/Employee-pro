@@ -61,5 +61,14 @@ def userhome(request):
         return render(request,'userhome.html',{'user':user})
     else:
         return redirect(userlogin)
-
-
+    
+def userprofile(request):
+    return render(request,'user_profile.html')
+def leave_balance(request):
+    return render(request,'user_leave_balance.html')
+def userpayroll(request):
+    return render(request,'user_payroll.html')
+def userpayslips(request):
+    return render(request,'user_payslips.html')
+def usersupport(request):
+    return render(request,'user_support.html')

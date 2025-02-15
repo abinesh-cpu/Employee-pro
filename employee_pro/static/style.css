@@ -1,76 +1,76 @@
-/* General Styles */
 body {
-    margin: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-}
-
-.hero-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    height: 80vh;
-    background: linear-gradient(120deg, #1abc9c, #16a085);
+    background-color: #f4f4f4;
+}
+.hero-section {
+    background: linear-gradient(to right, #003366, #00509E);
+    padding: 150px 20px;
     color: white;
+    text-align: center;
+    position: relative;
 }
-
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    background-repeat: none;
+    background: url(../static/employee_pro_logo.png) ;
+    background-size: cover;
+    opacity: 0.2;
+}
 .hero-content {
-    max-width: 600px;
+    position: relative;
+    z-index: 2;
 }
-
 .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
 .btn {
     display: inline-block;
-    padding: 12px 25px;
-    background: #fff;
-    color: #16a085;
-    font-size: 1.1rem;
-    font-weight: bold;
+    padding: 15px 30px;
+    margin-top: 20px;
+    background-color: #ffcc00;
+    color: #003366;
     text-decoration: none;
-    border-radius: 8px;
-    transition: 0.3s ease-in-out;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: 0.3s;
 }
-
 .btn:hover {
-    background: #f1f1f1;
+    background-color: #ff9900;
 }
-
-/* Features Section */
 .features {
     display: flex;
     justify-content: center;
-    margin: 50px auto;
-    max-width: 1000px;
-    gap: 20px;
+    gap: 30px;
+    padding: 80px 10px;
+    flex-wrap: wrap;
 }
-
 .feature {
-    flex: 1;
-    padding: 20px;
     background: white;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    transition: transform 0.3s;
 }
-
-.feature h2 {
-    color: #16a085;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+.feature:hover {
+    transform: translateY(-10px);
 }
-
-.feature p {
-    font-size: 1rem;
-    color: #555;
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature {
+        width: 80%;
+    }
 }
