@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee-Pro | Admin Payroll</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .payroll-container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 800px;
+            text-align: center;
+        }
+        .payroll-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+        .payroll-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .payroll-table th, .payroll-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        .payroll-table th {
+            background-color: #00509E;
+            color: white;
+        }
+        .btn-generate {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .btn-generate:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="payroll-container">
+        <div class="payroll-title">Admin Payroll Management</div>
+        <table class="payroll-table">
+            <tr>
+                <th>Employee ID</th>
+                <th>Name</th>
+                <th>Salary</th>
+                <th>Bonuses</th>
+                <th>Deductions</th>
+                <th>Net Pay</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>101</td>
+                <td>John Doe</td>
+                <td>$5000</td>
+                <td>$300</td>
+                <td>$200</td>
+                <td>$5100</td>
+                <td><a href="#" class="btn-generate">Generate Payslip</a></td>
+            </tr>
+            <tr>
+                <td>102</td>
+                <td>Jane Smith</td>
+                <td>$4500</td>
+                <td>$250</td>
+                <td>$150</td>
+                <td>$4600</td>
+                <td><a href="#" class="btn-generate">Generate Payslip</a></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

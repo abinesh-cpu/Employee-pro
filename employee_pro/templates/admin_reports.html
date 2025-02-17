@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee-Pro | Admin Reports</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .reports-container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 900px;
+            text-align: center;
+        }
+        .reports-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+        .reports-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .reports-table th, .reports-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        .reports-table th {
+            background-color: #00509E;
+            color: white;
+        }
+        .btn-download {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .btn-download:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="reports-container">
+        <div class="reports-title">Admin Reports</div>
+        <table class="reports-table">
+            <tr>
+                <th>Report ID</th>
+                <th>Report Name</th>
+                <th>Date Generated</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Employee Attendance Report</td>
+                <td>2025-02-14</td>
+                <td><a href="#" class="btn-download">Download</a></td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Payroll Summary Report</td>
+                <td>2025-02-14</td>
+                <td><a href="#" class="btn-download">Download</a></td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>Leave Balance Report</td>
+                <td>2025-02-14</td>
+                <td><a href="#" class="btn-download">Download</a></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
